@@ -13,12 +13,16 @@ export default function MemberCarousel() {
 
   useEffect(() => {
     async function fetchMembers() {
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("profiles")
-        .select("*")
-        .not("avatar_url", "is", null)
-        .not("quote", "is", null);
-      setMembers(data || []);
+        .select("*");
+      if (error) {
+        console.error("Failed to fetch members:", error);
+      }
+      const filtered = (data || []).filter(
+        (p) => p.avatar_url && p.quote
+      );
+      setMembers(filtered);
       setLoading(false);
     }
     fetchMembers();

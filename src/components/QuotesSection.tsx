@@ -12,12 +12,14 @@ export default function QuotesSection() {
 
   useEffect(() => {
     async function fetchQuotes() {
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("profiles")
-        .select("*")
-        .not("quote", "is", null)
-        .limit(6);
-      setMembers(data || []);
+        .select("*");
+      if (error) {
+        console.error("Failed to fetch quotes:", error);
+      }
+      const withQuotes = (data || []).filter((p) => p.quote).slice(0, 6);
+      setMembers(withQuotes);
       setLoading(false);
     }
     fetchQuotes();

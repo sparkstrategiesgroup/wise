@@ -13,13 +13,16 @@ export default function EventSpotlight() {
 
   useEffect(() => {
     async function fetchEvent() {
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("events")
         .select("*")
         .gte("date", new Date().toISOString())
         .order("date", { ascending: true })
         .limit(1)
         .single();
+      if (error) {
+        console.error("Failed to fetch event:", error);
+      }
       setEvent(data);
       setLoading(false);
     }
