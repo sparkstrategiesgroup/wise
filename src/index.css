@@ -1,17 +1,36 @@
 @import "tailwindcss";
 
-@theme {
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+@font-face {
+  font-family: "Salitia";
+  src: url("./assets/fonts/SalitiaThin.ttf") format("truetype");
+  font-weight: 100 300;
+  font-style: normal;
+  font-display: swap;
+}
 
-  --color-background: #0a0a0a;
-  --color-foreground: #fafaf9;
-  --color-secondary: #141414;
-  --color-muted-foreground: #a8a29e;
-  --color-border: #292524;
-  --color-gold: #c9a84c;
-  --color-gold-dark: #a68a3e;
-  --color-gold-light: #e0c56a;
+@font-face {
+  font-family: "Salitia";
+  src: url("./assets/fonts/SalitiaSemiBold.ttf") format("truetype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "Salitia", serif;
+  --font-sans: "Avenir Next", "Nunito Sans", sans-serif;
+
+  --color-background: #faf9f6;
+  --color-foreground: #454159;
+  --color-secondary: #f0eff4;
+  --color-muted-foreground: #7d7a8c;
+  --color-border: #e2e0e8;
+  --color-gold: #988557;
+  --color-gold-dark: #7a6b46;
+  --color-gold-light: #b8a274;
+  --color-lavender: #454159;
+  --color-lilac: #c7c5d3;
+  --color-taupe: #c9c0a5;
 }
 
 body {
