@@ -70,10 +70,11 @@ export default function WISEReflectionModal({
       content,
     }));
 
-    // @ts-expect-error supabase generic inference
     await supabase.from("reflections").insert(reflections);
-    // @ts-expect-error supabase generic inference
-    await supabase.from("profiles").update({ reflections_completed: true }).eq("id", user.id);
+    await supabase
+      .from("profiles")
+      .update({ reflections_completed: true })
+      .eq("id", user.id);
 
     setSubmitting(false);
     onComplete();

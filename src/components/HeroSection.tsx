@@ -31,10 +31,18 @@ export default function HeroSection({ onOpenReflection }: HeroSectionProps) {
         <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-xl mx-auto mb-4 leading-relaxed">
           Wisdom. Integrity. Strength. Elevation.
         </p>
-        <p className="text-muted-foreground font-sans max-w-lg mx-auto mb-10">
+        <p className="text-muted-foreground font-sans max-w-lg mx-auto mb-3">
           A private collective for women who lead with purpose, grow with
           intention, and rise together.
         </p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="text-gold/80 font-sans text-sm tracking-wide mb-10"
+        >
+          Join 40+ women leading with purpose
+        </motion.p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="gold" size="lg" onClick={onOpenReflection}>
             Begin Your Reflection
