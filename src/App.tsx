@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Index from "@/pages/Index";
+import Assessment from "@/pages/Assessment";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/assessment" element={<Assessment />} />
       <Route path="/framework" element={<FrameworkPlaceholder />} />
       <Route path="/members" element={<MembersPlaceholder />} />
     </Routes>

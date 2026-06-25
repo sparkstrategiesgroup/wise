@@ -44,9 +44,11 @@ export default function HeroSection({ onOpenReflection }: HeroSectionProps) {
           Join 40+ women leading with purpose
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="gold" size="lg" onClick={onOpenReflection}>
-            Begin Your Reflection
-          </Button>
+          <Link to="/assessment">
+            <Button variant="gold" size="lg">
+              Take the Assessment
+            </Button>
+          </Link>
           <Link to="/framework">
             <Button variant="elegant" size="lg">
               Explore the Framework
