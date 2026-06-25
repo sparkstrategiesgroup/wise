@@ -1,5 +1,5 @@
 export default function Wise() {
   return (
-    <span className="font-serif italic text-gold">W.I.S.E.</span>
+    <span className="font-serif italic text-lavender">W.I.S.E.</span>
   );
 }

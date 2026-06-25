@@ -14,10 +14,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-foreground text-background hover:bg-foreground/90",
-        gold: "bg-gold text-background font-semibold hover:bg-gold-dark",
+          "bg-lavender text-white hover:bg-lavender/90",
+        gold: "bg-gold text-white font-semibold hover:bg-gold-dark",
         elegant:
-          "border border-border bg-transparent text-foreground hover:bg-secondary hover:border-gold/50",
+          "border border-lilac bg-transparent text-foreground hover:bg-secondary hover:border-gold/50",
         ghost: "hover:bg-secondary hover:text-foreground",
         link: "text-gold underline-offset-4 hover:underline",
       },

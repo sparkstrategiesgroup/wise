@@ -10,7 +10,7 @@ interface HeroSectionProps {
 export default function HeroSection({ onOpenReflection }: HeroSectionProps) {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center px-6 bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gold/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-lavender/5 via-transparent to-transparent" />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
